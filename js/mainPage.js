@@ -1,10 +1,24 @@
 
 
-setTimeout(function(){
-  $(".loadingHourGlass").hide();
-}, 3500);
+//setTimeout(function(){
+//  $(".loadingHourGlass").hide();
+//  
+  
+//}, 3500);
 
 
 $(document).ready(function(){
-	$(".loadingHourGlass").show();
+	$("#page").show();
+	//$(".loadingHourGlass").show();
 });
+
+$(function(){
+  $(window).scroll(function(){
+    var winTop = $(window).scrollTop();
+    if(winTop >= 30){
+      $("body").addClass("sticky-header");
+    }else{
+      $("body").removeClass("sticky-header");
+    }//if-else
+  });//win func.
+});//ready func.
