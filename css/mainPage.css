@@ -10,6 +10,29 @@
     margin-left: -50px;
 }
 
+.skill{
+	position: absolute;
+}
+
+#skillA{
+	top: 40%;
+    left: 28%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+#imgSkillA{
+	width:115px;
+    margin: 10px;
+    border:6px solid grey;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
 .avatar {
     width:115px;
     margin: 10px;
