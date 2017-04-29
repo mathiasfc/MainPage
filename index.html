@@ -4,8 +4,13 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <!--Scripts -->
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/typed.js"></script>
   <script type="text/javascript" src="js/mainPage.js"></script>
+  <script type="text/javascript" src="js/skillsCards.js"></script>
+  
+
+  
 
   <!--End Scripts -->
   
@@ -13,6 +18,7 @@
   <!--Styles -->
   <link rel="stylesheet" type="text/css" href="css/mainPage.css">
   <link rel="stylesheet" type="text/css" href="css/loading-hourglass.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!--End Styles-->
   
   
@@ -34,21 +40,185 @@
 <body>
 <div id="page">
 
-<div id="mainHeader">
-teste
-<div>
-<header>
-<nav id="fixed-navbar">
-</nav>
-</header>
-
-
-<section style="display:none;">
-	<div id="myPerson">
-		<img class="avatar" src="http://cs409019.vk.me/v409019863/1b6/09FPiv6Nr5A.jpg"></img>
-	</div>
-</section>
+<div class="vertical-menu">
+  <ul class="vertical-links">
+    <li class="vertical-link"><a href="#">Sobre</a></li>
+    <li class="vertical-link"><a href="#">Skills</a></li>
+    <li class="vertical-link"><a href="#">Contato</a></li>
+  </ul>
 </div>
+<div class="shadow"></div>
+<header>
+  <!-- <svg data-src="http://jonathano.com/img/menu.svg" class="menu-icon"></svg> -->
+  <a href="#welcome" class="brand">
+    Mathias Falci
+  </a>
+  <ul class="links">
+     <li class="link"><a href="#about">Sobre</a></li>
+     <li class="link"><a href="#skills">Skills</a></li>
+     <li class="link"><a href="#contact">Contato</a></li>
+  </ul>
+</header>
+<section id="welcome" class="parallax container">
+  <div class="parallax-inner">
+    <!-- <img src="img/perfil.jpg" class="profile" /> -->
+	
+	
+	
+	
+	<div class="outer">
+  <div class="hovereffect">
+    <img src="img/perfil.jpg" alt="">
+    <div class="overlay">
+      <h2></h2>
+      <div class="rotate">
+        <p class="group1">
+          <a href="#">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-github"></i>
+          </a>
+        </p>
+        <hr>
+        <hr>
+        <p class="group2">
+          <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-stack-overflow"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
+    <h1><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span>Olá<span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span><br /><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span><span class="welcomeMsgs"></span><span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span></h1>
+  </div>
+</section>
+<section id="about">
+<div class="parallaxDeveloper">
+
+</div>
+
+<div class="aboutMe">
+<h1>Sobre mim</h1>
+<div class="textAboutMe">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus molestie leo, sed sagittis enim ullamcorper in. Donec vitae neque ultricies, convallis nibh in, vulputate massa. Fusce interdum lectus at nisi tempus dapibus. Donec non pellentesque eros. Integer ut mattis lectus, sit amet efficitur felis. Vestibulum non tellus risus. Donec eget mauris nibh. Nulla id pharetra orci. Cras sapien eros, sagittis finibus sapien at, fringilla convallis leo. Aliquam justo nisl, commodo eget molestie nec, posuere sit amet felis. Integer faucibus nunc quis ultricies aliquam. Nullam tincidunt vel metus quis ullamcorper. Phasellus eget dui vulputate lectus euismod tincidunt aliquet id mi. In condimentum eros at nulla iaculis ultrices. Aliquam erat volutpat. Etiam efficitur nunc nec nisl euismod vestibulum.
+
+Ut dictum nisl vitae urna consectetur, a laoreet ipsum gravida. Pellentesque bibendum porta erat. Curabitur non nunc velit. Aliquam facilisis venenatis justo. Nulla erat ex, iaculis posuere lacus vel, rutrum luctus risus. Morbi lorem tortor, ullamcorper in convallis tempor, cursus ut turpis. Phasellus vitae nunc in lectus semper luctus sit amet non turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+</div>
+</div>
+
+  
+</section>
+
+<section id="skills">
+<div class="allSkills">
+  <div id="firstDivSkills" class="skills">
+	<div class="header">
+		<h2><img src="img/icons/html.png" class="skillIcon" />Front-end</h2>
+	</div>
+	<div data-label="jQuery" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="Javascript" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="Html" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="CSS" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Bootstrap" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Materialize" data-level="67" class="chart"><span></span><p></p></div>
+	<div data-label="AJAX" data-level="66" class="chart"><span></span><p></p></div>
+	<div data-label="Angular" data-level="65" class="chart"><span></span><p></p></div>
+</div>
+
+<div id="secondDivSkills" class="skills">
+	<div class="header">
+		<h2><img src="img/icons/gear.png" class="skillIcon" />Back-end</h2>
+	</div>
+	<div data-label="C#" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label=".NET" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="Java" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="SQL" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="VB" data-level="66" class="chart"><span></span><p></p></div>
+	<div data-label="Python" data-level="65" class="chart"><span></span><p></p></div>
+	<div data-label="C++" data-level="45" class="chart"><span></span><p></p></div>
+	<div data-label="C" data-level="30" class="chart"><span></span><p></p></div>
+</div>
+
+<div id="thirdDivSkills" class="skills">
+	<div class="header">
+		<h2><img src="img/icons/notepad.png" class="skillIcon" />IDE's</h2>
+	</div>
+	<div data-label="Visual Studio" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="SQL Server" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="Eclipse" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Android Studio" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Code Blocks" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Netbeans" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Sublime" data-level="67" class="chart"><span></span><p></p></div>
+	<div data-label="Notepad++" data-level="66" class="chart"><span></span><p></p></div>
+</div>
+
+</div>
+</section>
+<section id="contact">
+<div class="rowContact">
+
+<div class="divSocial contact-github ">
+	<a href="#">
+        <i class="fa fa-github iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">Github</p>
+    </a>
+</div>
+
+<div class="divSocial contact-stack ">
+	<a href="#">
+        <i class="fa fa-stack-overflow iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">Stack Overflow</p>
+    </a>
+</div>
+
+<div class="divSocial contact-wordpress ">
+	<a href="#">
+        <i class="fa fa-wordpress iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">WordPress</p>
+    </a>
+</div>
+
+
+</div>
+<div class="rowContact">
+<div class="divSocial contact-linkedin  ">
+	<a href="#">
+        <i class="fa fa-linkedin-square iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">LinkedIn</p>
+    </a>
+</div>
+
+<div class="divSocial contact-facebook ">
+	<a href="#">
+        <i class="fa fa-facebook-square iconSocial" style="font-size:5em; "></i>
+		<p class="nameSocial">Facebook</p>
+    </a>
+</div>
+	
+<div class="divSocial contact-email ">
+	<a href="#">
+        <i class="fa fa-envelope iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">mathias.falci@gmail.com</p>
+    </a>
+</div>
+</div>
+
+
+
+
+
+
+</section></div>
 
 </body>
 </html>
