@@ -53,6 +53,18 @@
   <a href="#welcome" class="brand">
     Mathias Falci
   </a>
+  
+  <div class="switch white switchPosition">
+			<input type="radio" name="switch" id="switch-off">
+			<input type="radio" name="switch" id="switch-on" checked>
+
+			<label for="switch-off">pt-Br</label>
+			<label for="switch-on">en-Us</label>
+
+			<span class="toggle"></span>
+
+  </div>
+  
   <ul class="links">
      <li class="link"><a href="#about">Sobre</a></li>
      <li class="link"><a href="#skills">Skills</a></li>
@@ -66,10 +78,10 @@
 	
 	
 	
-	<div class="outer">
+	<div class="outer" style="display:none;">
   <div class="hovereffect">
     <img src="img/perfil.jpg" alt="">
-    <div class="overlay">
+    <div class="overlay" >
       <h2></h2>
       <div class="rotate">
         <p class="group1">
@@ -107,11 +119,10 @@
 </div>
 
 <div class="aboutMe">
-<h1>Sobre mim</h1>
+<h1>Sobre</h1>
 <div class="textAboutMe">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus molestie leo, sed sagittis enim ullamcorper in. Donec vitae neque ultricies, convallis nibh in, vulputate massa. Fusce interdum lectus at nisi tempus dapibus. Donec non pellentesque eros. Integer ut mattis lectus, sit amet efficitur felis. Vestibulum non tellus risus. Donec eget mauris nibh. Nulla id pharetra orci. Cras sapien eros, sagittis finibus sapien at, fringilla convallis leo. Aliquam justo nisl, commodo eget molestie nec, posuere sit amet felis. Integer faucibus nunc quis ultricies aliquam. Nullam tincidunt vel metus quis ullamcorper. Phasellus eget dui vulputate lectus euismod tincidunt aliquet id mi. In condimentum eros at nulla iaculis ultrices. Aliquam erat volutpat. Etiam efficitur nunc nec nisl euismod vestibulum.
 
-Ut dictum nisl vitae urna consectetur, a laoreet ipsum gravida. Pellentesque bibendum porta erat. Curabitur non nunc velit. Aliquam facilisis venenatis justo. Nulla erat ex, iaculis posuere lacus vel, rutrum luctus risus. Morbi lorem tortor, ullamcorper in convallis tempor, cursus ut turpis. Phasellus vitae nunc in lectus semper luctus sit amet non turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
 </div>
 </div>
 
@@ -219,6 +230,6 @@ Ut dictum nisl vitae urna consectetur, a laoreet ipsum gravida. Pellentesque bib
 
 
 </section></div>
-
+<input type="hidden" id="hdLanguage" value="pt-Br">
 </body>
 </html>

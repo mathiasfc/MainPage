@@ -1,3 +1,5 @@
+var userLang = navigator.language || navigator.userLanguage; 
+
 var isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i)
@@ -21,14 +23,17 @@ var isMobile = {
 
 var strings = {
   msgs: [
-    'Seja bem-vindo',
-    'Sou facinado por novas tecnologias',
-    'Estou sempre em busca de conhecimento',
-    'Sou um ávido admirador das linguagens de programação'
+    //'Seja bem-vindo',
+    //'Sou facinado por novas tecnologias',
+    //'Estou sempre em busca de conhecimento',
+    //'Sou um ávido admirador das linguagens de programação'
   ],
 }
 
 $(document).ready(function(){
+	$("#hdLanguage").val(userLang);
+	setLanguage($("#hdLanguage").val());
+	
 	$('.welcomeMsgs').typed({
   strings: strings.msgs,
   typeSpeed: 90,
@@ -168,3 +173,29 @@ $('a[href*=#]').on('click', function(event) {
     }
   }
 })
+
+
+function setLanguage(userLang){
+	if(userLang == "pt-BR"){
+		
+	}else if(userLang == "en-US"){
+		
+	}else{
+		
+	}
+	
+}
+
+var ptBr, enUS;
+ptBr = {
+    "name":"John",
+    "age": "1",
+	"test": "2",
+    //"cars":[ "Ford", "BMW", "Fiat" ]
+};
+
+enUS = {
+    "name":"John",
+    "age": "1",
+	"test": "2",
+};
