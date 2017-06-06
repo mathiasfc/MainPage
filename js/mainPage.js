@@ -104,8 +104,6 @@ $("input[id*='switch-']").click(function(){
 	}, 300);
 });
 
-
-
 });
 
 
@@ -222,14 +220,14 @@ Object.keys(skills).forEach(function (key) {
   })
 })
 
-//remoteSVG('svg.menu-icon', 'menu-icon', function () {
-//  $('.menu-icon').on('click', function () {
-//    console.log('click')
-//    $('.shadow').fadeIn()
-//    $('.vertical-menu').addClass('animated slideInLeft')
-//  })
-//})
-//remoteSVG('svg.menu-close', 'menu-close')
+remoteSVG('svg.menu-icon', 'menu-icon', function () {
+  $('.menu-icon').on('click', function () {
+    console.log('click')
+    $('.shadow').fadeIn()
+    $('.vertical-menu').addClass('animated slideInLeft')
+  })
+})
+remoteSVG('svg.menu-close', 'menu-close')
 
 $('a[href*=#]').on('click', function(event) {
   $('.active').removeClass('active')
@@ -248,32 +246,28 @@ $('a[href*=#]').on('click', function(event) {
 
 function setLanguage(userLang){
 	if(userLang == "pt-BR"){
-		strings.msgs[0] = "test pt-BR1";
-		strings.msgs[1] = "test pt-BR2";
-		strings.msgs[2] = "test pt-BR3";
-		strings.msgs[3] = "test pt-BR4";
+		strings.msgs[0] = "Seja bem-vindo";
+		strings.msgs[1] = "Sinta-se à vontade para me contatar";
 		$(".spanSobre").text("Sobre");
 		$(".spanSkills").text("Skills");
 		$(".spanContato").text("Contato");
 		document.getElementById("spanOla").innerHTML = "Olá";
-		var text = "Olá, meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS, o que me levou a escolher"+ 
+		var text = "Meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS, o que me levou a escolher "+ 
 		"esse curso foi o fascínio pelas ferramentas de automação, principalmente em games. Meu primeiro contato com a programção foi através de script's escritos em <a href='https://www.lua.org/portugues.html'>LUA</a> há muito tempo.<br>"+
-		"Desde então me interessei cada vez mais sobre o assunto, e hoje a programação faz parte da minha rotina de trabalho e estudo. Em 2012 comecei a trabalhar na <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
+		"Desde então me interessei cada vez mais sobre o assunto, me tornei um entusiasta das linguagens e seus potenciais, e hoje a programação faz parte da minha rotina de trabalho e estudo. No final de 2015 comecei a trabalhar na <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
 		"desenvolvendo softwares e páginas web, durante este período que descobri meu encanto por linguagens como C# e JavaScript. No meu <del>tempo livre</del> gosto de me aprofundar em linguagens que me chamam atenção como Python e "+
 		"me aventurar \"fuçando\" framework's e plugin's javascript. Também tento participar sempre que possível do <a href='https://pt.stackoverflow.com/'>StackOverflow</a> visando ampliar meu conhecimento nas mais diversas áreas da programação.";
 		document.getElementById("spanDescription").innerHTML = text;
 	}else if(userLang == "en-US"){
-		strings.msgs[0] = "test en-US1";
-		strings.msgs[1] = "test en-US2";
-		strings.msgs[2] = "test en-US3";
-		strings.msgs[3] = "test en-US4";
+		strings.msgs[0] = "Welcome";
+		strings.msgs[1] = "Feel free to contact me";
 		$(".spanSobre").text("About");
 		$(".spanSkills").text("Skills");
 		$(".spanContato").text("Contact");
 		document.getElementById("spanOla").innerHTML = "Hello";
-		var text = "Hi, my name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose"+ 
+		var text = "My name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose "+ 
 		"this course was the fascination for automation tools, especially in games. My first contact with programming was through scripts written in <a href='https://www.lua.org/portugues.html'>LUA</a> a long time ago.<br>"+
-		"Since then I have become more interested in the subject, and today programming is part of my work routine and study. In 2012 I started working on <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
+		"Since then I have become more interested in the subject, I became an enthusiast of languages and their potential, and today programming is part of my work routine and study. In the end of 2015 I started working on <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
 		"developing softwares and web pages, during this time I discovered my charm for languages like C# and JavaScript. In my <del>free time</del> I like to study languages that call me attention like Python and "+
 		"explore framework's and plugin's javascript. I also try to participate whenever possible in the <a href='https://pt.stackoverflow.com/'>StackOverflow</a> looking for knowledge in the most diverse areas of programming."
 		document.getElementById("spanDescription").innerHTML = text;
@@ -312,6 +306,8 @@ function getCookie(name) {
     }
     return null;
 }
+
+
 
 
 

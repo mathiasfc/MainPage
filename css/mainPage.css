@@ -184,12 +184,14 @@ section#about > p > a:hover {
 }
 
 section#skills {
-  padding: 50px;
+  padding: 30px;
+  height:auto;
+  min-height: 600px;
 }
 
 section#skills > h1 {
   text-align: center;
-  font-size: 42px;
+  font-size: 37px;
 }
 
 section#skills > .skills-cont {
@@ -782,6 +784,7 @@ a {
 		width:34%;
 		height:160px;
 		text-align: center;
+    cursor: pointer;
 	}
 	
 	.rowContact{
