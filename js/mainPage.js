@@ -192,33 +192,35 @@ $('a[href*=#]').on('click', function(event) {
 
 function setLanguage(userLang){
 	if(userLang == "pt-BR"){
-		string.msgs[0] = "test pt-BR1";
-		string.msgs[1] = "test pt-BR2";
-		string.msgs[2] = "test pt-BR3";
-		string.msgs[3] = "test pt-BR4";
+		strings.msgs[0] = "test pt-BR1";
+		strings.msgs[1] = "test pt-BR2";
+		strings.msgs[2] = "test pt-BR3";
+		strings.msgs[3] = "test pt-BR4";
 		$(".spanSobre").val("Sobre");
 		$(".spanSkills").val("Skills");
 		$(".spanContato").val("Contato");
-		document.getElementById("spanOla").innerHTML("Olá");
-		document.getElementById("spanDescription").innerHTML("Olá, meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS, o que me levou a escolher"+ 
+		document.getElementById("spanOla").innerHTML = "Olá";
+		var text = "Olá, meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS, o que me levou a escolher"+ 
 		"esse curso foi o fascínio pelas ferramentas de automação, principalmente em games. Meu primeiro contato com a programção foi através de script's escritos em <a href='https://www.lua.org/portugues.html'>LUA</a> há muito tempo.<br>"+
 		"Desde então me interessei cada vez mais sobre o assunto, e hoje a programação faz parte da minha rotina de trabalho e estudo. Em 2012 comecei a trabalhar na <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
 		"desenvolvendo softwares e páginas web, durante este período que descobri meu encanto por linguagens como C# e JavaScript. No meu <del>tempo livre</del> gosto de me aprofundar em linguagens que me chamam atenção como Python e "+
-		"me aventurar ""fuçando"" framework's e plugin's javascript. Também tento participar sempre que possível do <a href='https://pt.stackoverflow.com/'>StackOverflow</a> visando ampliar meu conhecimento nas mais diversas áreas da programação.");
+		"me aventurar \"fuçando\" framework's e plugin's javascript. Também tento participar sempre que possível do <a href='https://pt.stackoverflow.com/'>StackOverflow</a> visando ampliar meu conhecimento nas mais diversas áreas da programação.";
+		document.getElementById("spanDescription").innerHTML = text;
 	}else if(userLang == "en-US"){
-		string.msgs[0] = "test en-US1";
-		string.msgs[1] = "test en-US2";
-		string.msgs[2] = "test en-US3";
-		string.msgs[3] = "test en-US4";
+		strings.msgs[0] = "test en-US1";
+		strings.msgs[1] = "test en-US2";
+		strings.msgs[2] = "test en-US3";
+		strings.msgs[3] = "test en-US4";
 		$(".spanSobre").val("Sobre");
 		$(".spanSkills").val("Skills");
 		$(".spanContato").val("Contato");
-		document.getElementById("spanOla").innerHTML("Olá");
-		document.getElementById("spanDescription").innerHTML("Hi, my name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose"+ 
+		document.getElementById("spanOla").innerHTML = "Olá";
+		var text = "Hi, my name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose"+ 
 		"this course was the fascination for automation tools, especially in games. My first contact with programming was through scripts written in <a href='https://www.lua.org/portugues.html'>LUA</a> a long time ago.<br>"+
 		"Since then I have become more interested in the subject, and today programming is part of my work routine and study. In 2012 I started working on <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
 		"developing softwares and web pages, during this time I discovered my charm for languages like C# and JavaScript. In my <del>free time</del> I like to study languages that call me attention like Python and "+
-		"explore framework's and plugin's javascript. I also try to participate whenever possible in the <a href='https://pt.stackoverflow.com/'>StackOverflow</a> looking for knowledge in the most diverse areas of programming.");
+		"explore framework's and plugin's javascript. I also try to participate whenever possible in the <a href='https://pt.stackoverflow.com/'>StackOverflow</a> looking for knowledge in the most diverse areas of programming."
+		document.getElementById("spanDescription").innerHTML = text;
 	}
 	
 }
@@ -227,19 +229,6 @@ function ChangeUserLanguage(){
 	
 }
 
-var ptBr, enUS;
-ptBr = {
-    "name":"John",
-    "age": "1",
-	"test": "2",
-    //"cars":[ "Ford", "BMW", "Fiat" ]
-};
-
-enUS = {
-    "name":"John",
-    "age": "1",
-	"test": "2",
-};
 
 
 function setCookie(cname, cvalue, exdays) {
@@ -264,3 +253,11 @@ function getCookie(cname) {
     }
     return "";
 }
+
+
+$(document).scroll(function() {
+   var scrollTop = $(this).scrollTop();
+   console.log(scrollTop);
+});
+
+
