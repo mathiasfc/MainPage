@@ -24,7 +24,7 @@ var isMobile = {
 var strings = {
   msgs: [
     //'Seja bem-vindo',
-    //'Sou facinado por novas tecnologias',
+    //'Sou fascinado por novas tecnologias',
     //'Estou sempre em busca de conhecimento',
     //'Sou um ávido admirador das linguagens de programação'
   ],
@@ -42,9 +42,18 @@ $(document).ready(function(){
     $('.typed-cursor').fadeOut()
   }
 });	
+
+
 });
 
 
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 800);
+});
 
 $(window).scroll(function () {
   var $w = $('#welcome')
