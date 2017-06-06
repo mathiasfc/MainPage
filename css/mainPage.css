@@ -947,4 +947,9 @@ a {
     margin-top: -33px;
     position: absolute;
 }
+
+.full{
+	height:100%;
+	width:100%;
+}
 	

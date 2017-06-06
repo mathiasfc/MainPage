@@ -47,6 +47,25 @@ $(document).ready(function(){
   callback: function () {
     $('.typed-cursor').fadeOut()
   }
+});
+
+var currentSection = $('#welcome');
+$(window).on('wheel', function(e) {
+  var delta = e.originalEvent.deltaY;
+  if (delta > 0 && currentSection.next().length > 0) {
+    currentSection = currentSection.next();
+    scrollTo(currentSection);
+  } else if (delta < 0 && currentSection.prev().length > 0) {
+    currentSection = currentSection.prev();
+    scrollTo(currentSection);
+  }
+
+  function scrollTo(el) {
+    realoffSet = el.offset().top;
+    $("html, body").animate({
+      scrollTop: realoffSet
+    }, 500);
+  }
 });	
 
 
@@ -196,9 +215,9 @@ function setLanguage(userLang){
 		strings.msgs[1] = "test pt-BR2";
 		strings.msgs[2] = "test pt-BR3";
 		strings.msgs[3] = "test pt-BR4";
-		$(".spanSobre").val("Sobre");
-		$(".spanSkills").val("Skills");
-		$(".spanContato").val("Contato");
+		$(".spanSobre").text("Sobre");
+		$(".spanSkills").text("Skills");
+		$(".spanContato").text("Contato");
 		document.getElementById("spanOla").innerHTML = "Olá";
 		var text = "Olá, meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS, o que me levou a escolher"+ 
 		"esse curso foi o fascínio pelas ferramentas de automação, principalmente em games. Meu primeiro contato com a programção foi através de script's escritos em <a href='https://www.lua.org/portugues.html'>LUA</a> há muito tempo.<br>"+
@@ -211,9 +230,9 @@ function setLanguage(userLang){
 		strings.msgs[1] = "test en-US2";
 		strings.msgs[2] = "test en-US3";
 		strings.msgs[3] = "test en-US4";
-		$(".spanSobre").val("Sobre");
-		$(".spanSkills").val("Skills");
-		$(".spanContato").val("Contato");
+		$(".spanSobre").text("Sobre");
+		$(".spanSkills").text("Skills");
+		$(".spanContato").text("Contato");
 		document.getElementById("spanOla").innerHTML = "Olá";
 		var text = "Hi, my name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose"+ 
 		"this course was the fascination for automation tools, especially in games. My first contact with programming was through scripts written in <a href='https://www.lua.org/portugues.html'>LUA</a> a long time ago.<br>"+
@@ -255,9 +274,6 @@ function getCookie(cname) {
 }
 
 
-$(document).scroll(function() {
-   var scrollTop = $(this).scrollTop();
-   console.log(scrollTop);
-});
+
 
 
