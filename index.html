@@ -23,9 +23,10 @@
   
   
   
-  <title>Main page</title>
-  <meta name="description" content="Description">
+  <title>Mathias</title>
+  <meta name="description" content="Minha pagina pessoal">
   <meta name="author" content="Mathias">
+  <link rel="shortcut icon" type="image/png" href="img/icons/html.png"/>
 
 	
 </head>
@@ -42,9 +43,9 @@
 
 <div class="vertical-menu">
   <ul class="vertical-links">
-    <li class="vertical-link"><a href="#">Sobre</a></li>
-    <li class="vertical-link"><a href="#">Skills</a></li>
-    <li class="vertical-link"><a href="#">Contato</a></li>
+    <li class="vertical-link"><a href="#"><span class="spanSobre"></span></a></li>
+    <li class="vertical-link"><a href="#"><span class="spanSkills"></span></a></li>
+    <li class="vertical-link"><a href="#"><span class="spanContato"></span></a></li>
   </ul>
 </div>
 <div class="shadow"></div>
@@ -66,9 +67,9 @@
   </div>
   
   <ul class="links">
-     <li class="link"><a href="#about">Sobre</a></li>
-     <li class="link"><a href="#skills">Skills</a></li>
-     <li class="link"><a href="#contact">Contato</a></li>
+     <li class="link"><a href="#about"><span class="spanSobre"></span></a></li>
+     <li class="link"><a href="#skills"><span class="spanSkills"></span></a></li>
+     <li class="link"><a href="#contact"><span class="spanContato"></span></a></li>
   </ul>
 </header>
 <section id="welcome" class="parallax container">
@@ -110,7 +111,7 @@
 	
 	
 	
-    <h1><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span>Olá<span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span><br /><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span><span class="welcomeMsgs"></span><span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span></h1>
+    <h1><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span><span id="spanOla"></span><span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span><br /><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span><span class="welcomeMsgs"></span><span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span></h1>
   </div>
 </section>
 <section id="about">
@@ -119,14 +120,9 @@
 </div>
 
 <div class="aboutMe">
-<h1>Sobre</h1>
+<h1><span class="spanSobre"></span></h1>
 <div class="textAboutMe">
-Olá, meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS, o que me levou a escolher 
-esse curso foi o fascínio pelas ferramentas de automação, principalmente em games. Meu primeiro contato com a programção foi através de script's escritos em <a href="https://www.lua.org/portugues.html">LUA</a> há muito tempo.<br>
-Desde então me interessei cada vez mais sobre o assunto, e hoje a programação faz parte da minha rotina de trabalho e estudo. Em 2012 comecei a trabalhar na <a href="http://www.absis.com.br/paginas/default.aspx">Absis</a>,<br>
-desenvolvendo softwares e páginas web, durante este período que descobri meu encanto por linguagens como C# e JavaScript. No meu <del>tempo livre</del> gosto de me aprofundar em linguagens que me chamam atenção como Python e 
-me aventurar "fuçando" framework's e plugin's javascript. Também tento participar sempre que possível do <a href="https://pt.stackoverflow.com/">StackOverflow</a> visando ampliar meu conhecimento nas mais diversas áreas da programação.
-
+<span id="spanDescription"></span>
 </div>
 </div>
 
@@ -139,26 +135,24 @@ me aventurar "fuçando" framework's e plugin's javascript. Também tento partici
 	<div class="header">
 		<h2><img src="img/icons/html.png" class="skillIcon" />Front-end</h2>
 	</div>
-	<div data-label="jQuery" data-level="90" class="chart"><span></span><p></p></div>
-	<div data-label="Javascript" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="Javascript" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="jQuery" data-level="80" class="chart"><span></span><p></p></div>
 	<div data-label="Html" data-level="80" class="chart"><span></span><p></p></div>
-	<div data-label="CSS" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Asp.Net" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="CSS" data-level="70" class="chart"><span></span><p></p></div>
 	<div data-label="Bootstrap" data-level="70" class="chart"><span></span><p></p></div>
-	<div data-label="Materialize" data-level="67" class="chart"><span></span><p></p></div>
-	<div data-label="AJAX" data-level="66" class="chart"><span></span><p></p></div>
-	<div data-label="Angular" data-level="65" class="chart"><span></span><p></p></div>
+	<div data-label="AJAX" data-level="65" class="chart"><span></span><p></p></div>
+	<div data-label="Angular" data-level="40" class="chart"><span></span><p></p></div>
 </div>
 
 <div id="secondDivSkills" class="skills">
 	<div class="header">
 		<h2><img src="img/icons/gear.png" class="skillIcon" />Back-end</h2>
 	</div>
-	<div data-label="C#" data-level="90" class="chart"><span></span><p></p></div>
-	<div data-label=".NET" data-level="90" class="chart"><span></span><p></p></div>
-	<div data-label="Java" data-level="90" class="chart"><span></span><p></p></div>
-	<div data-label="SQL" data-level="80" class="chart"><span></span><p></p></div>
-	<div data-label="VB" data-level="66" class="chart"><span></span><p></p></div>
-	<div data-label="Python" data-level="65" class="chart"><span></span><p></p></div>
+	<div data-label=".NET(C#,VB)" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Java" data-level="60" class="chart"><span></span><p></p></div>
+	<div data-label="SQL" data-level="60" class="chart"><span></span><p></p></div>
+	<div data-label="Python" data-level="50" class="chart"><span></span><p></p></div>
 	<div data-label="C++" data-level="45" class="chart"><span></span><p></p></div>
 	<div data-label="C" data-level="30" class="chart"><span></span><p></p></div>
 </div>
@@ -168,13 +162,13 @@ me aventurar "fuçando" framework's e plugin's javascript. Também tento partici
 		<h2><img src="img/icons/notepad.png" class="skillIcon" />IDE's</h2>
 	</div>
 	<div data-label="Visual Studio" data-level="90" class="chart"><span></span><p></p></div>
-	<div data-label="SQL Server" data-level="90" class="chart"><span></span><p></p></div>
-	<div data-label="Eclipse" data-level="80" class="chart"><span></span><p></p></div>
-	<div data-label="Android Studio" data-level="80" class="chart"><span></span><p></p></div>
-	<div data-label="Code Blocks" data-level="80" class="chart"><span></span><p></p></div>
-	<div data-label="Netbeans" data-level="70" class="chart"><span></span><p></p></div>
-	<div data-label="Sublime" data-level="67" class="chart"><span></span><p></p></div>
-	<div data-label="Notepad++" data-level="66" class="chart"><span></span><p></p></div>
+	<div data-label="SQL Server" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Eclipse" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Android Studio" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Code Blocks" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Netbeans" data-level="60" class="chart"><span></span><p></p></div>
+	<!-- <div data-label="Sublime" data-level="67" class="chart"><span></span><p></p></div> -->
+	<!-- <div data-label="Notepad++" data-level="66" class="chart"><span></span><p></p></div> -->
 </div>
 
 </div>
@@ -183,21 +177,21 @@ me aventurar "fuçando" framework's e plugin's javascript. Também tento partici
 <div class="rowContact">
 
 <div class="divSocial contact-github ">
-	<a href="https://github.com/mathiasfc">
+	<a target="_blank" href="https://github.com/mathiasfc">
         <i class="fa fa-github iconSocial" style="font-size:5em;"></i>
 		<p class="nameSocial">Github</p>
     </a>
 </div>
 
 <div class="divSocial contact-stack ">
-	<a href="https://pt.stackoverflow.com/users/67721/mathias">
+	<a target="_blank" href="https://pt.stackoverflow.com/users/67721/mathias">
         <i class="fa fa-stack-overflow iconSocial" style="font-size:5em;"></i>
 		<p class="nameSocial">Stack Overflow</p>
     </a>
 </div>
 
 <div class="divSocial contact-wordpress ">
-	<a href="https://mathiasfalci.wordpress.com/">
+	<a target="_blank" href="https://mathiasfalci.wordpress.com/">
         <i class="fa fa-wordpress iconSocial" style="font-size:5em;"></i>
 		<p class="nameSocial">WordPress</p>
     </a>
@@ -207,32 +201,26 @@ me aventurar "fuçando" framework's e plugin's javascript. Também tento partici
 </div>
 <div class="rowContact">
 <div class="divSocial contact-linkedin  ">
-	<a href="https://br.linkedin.com/in/mathias-falci-de-castro-9b6778a0">
+	<a target="_blank" href="https://br.linkedin.com/in/mathias-falci-de-castro-9b6778a0">
         <i class="fa fa-linkedin-square iconSocial" style="font-size:5em;"></i>
 		<p class="nameSocial">LinkedIn</p>
     </a>
 </div>
 
 <div class="divSocial contact-facebook ">
-	<a href="https://www.facebook.com/mathiasfalci">
+	<a target="_blank" href="https://www.facebook.com/mathiasfalci">
         <i class="fa fa-facebook-square iconSocial" style="font-size:5em; "></i>
 		<p class="nameSocial">Facebook</p>
     </a>
 </div>
 	
 <div class="divSocial contact-email ">
-	<a href="#">
+	<a target="_blank" href="#">
         <i class="fa fa-envelope iconSocial" style="font-size:5em;"></i>
 		<p class="nameSocial">mathias.falci@gmail.com</p>
     </a>
 </div>
 </div>
-
-
-
-
-
-
 </section></div>
 <input type="hidden" id="hdLanguage" value="pt-Br">
 </body>
