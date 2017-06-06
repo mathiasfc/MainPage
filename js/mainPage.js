@@ -30,13 +30,23 @@ var strings = {
   ],
 }
 
+function setPositionCircle(userLang){
+	if(userLang == "pt-BR"){
+		$("#circleToggle").css("left","32px");
+	}else if(userLang == "en-US"){
+		$("#circleToggle").css("left","4px");
+	}
+}
+
 $(document).ready(function(){
 	var userLanguagePreference = getCookie("lang");
 	$("#hdLanguage").val(userLang);
 	if(userLanguagePreference){
 		setLanguage(userLanguagePreference);
+		setPositionCircle(userLanguagePreference);
 	}else{
 		setLanguage($("#hdLanguage").val());
+		setPositionCircle($("#hdLanguage").val());
 	}
 	
 	
@@ -49,7 +59,8 @@ $(document).ready(function(){
   }
 });
 
-var currentSection = $('#welcome');
+//HAILJACK SCROLL
+/*var currentSection = $('#welcome');
 $(window).on('wheel', function(e) {
   var delta = e.originalEvent.deltaY;
   if (delta > 0 && currentSection.next().length > 0) {
@@ -66,7 +77,33 @@ $(window).on('wheel', function(e) {
       scrollTop: realoffSet
     }, 500);
   }
-});	
+});	*/
+//END HAILJACK
+
+$("input[id*='switch-']").click(function(){
+	if($("#circleToggle").position().left == 32){
+		$("#circleToggle").css("left","4px");
+		$("#ptBR").css("color","#31ff4c");
+		$("#enUS").css("color","white");
+		ChangeUserLanguage(false);
+	}else if($("#circleToggle").position().left == 4){
+		$("#circleToggle").css("left","32px");
+		$("#ptBR").css("color","white");
+		$("#enUS").css("color","#31ff4c");
+		ChangeUserLanguage(true);
+	}
+	
+	setTimeout(function(){ 
+	if($("#circleToggle").position().left == 32){
+		$("#ptBR").css("color","#31ff4c");
+		$("#enUS").css("color","white");
+	}else if($("#circleToggle").position().left == 4){
+		$("#ptBR").css("color","white");
+		$("#enUS").css("color","#31ff4c");
+	}
+	}, 300);
+});
+
 
 
 });
@@ -230,10 +267,10 @@ function setLanguage(userLang){
 		strings.msgs[1] = "test en-US2";
 		strings.msgs[2] = "test en-US3";
 		strings.msgs[3] = "test en-US4";
-		$(".spanSobre").text("Sobre");
+		$(".spanSobre").text("About");
 		$(".spanSkills").text("Skills");
-		$(".spanContato").text("Contato");
-		document.getElementById("spanOla").innerHTML = "Olá";
+		$(".spanContato").text("Contact");
+		document.getElementById("spanOla").innerHTML = "Hello";
 		var text = "Hi, my name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose"+ 
 		"this course was the fascination for automation tools, especially in games. My first contact with programming was through scripts written in <a href='https://www.lua.org/portugues.html'>LUA</a> a long time ago.<br>"+
 		"Since then I have become more interested in the subject, and today programming is part of my work routine and study. In 2012 I started working on <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
@@ -244,33 +281,36 @@ function setLanguage(userLang){
 	
 }
 
-function ChangeUserLanguage(){
+function ChangeUserLanguage(br){
+	if(br){
+		setCookie("lang","pt-BR");
+		setLanguage("pt-BR");
+	}else{
+		setCookie("lang","en-US");
+		setLanguage("en-US");
+	}
 	
 }
 
-
-
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
         var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
-    return "";
+    return null;
 }
 
 

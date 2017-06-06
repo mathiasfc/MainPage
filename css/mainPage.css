@@ -898,6 +898,7 @@ a {
 
 .switch input {
 	/*height: 64px;*/
+	height: 18px;
 	left: 0;
 	opacity: 0;
 	position: absolute;
