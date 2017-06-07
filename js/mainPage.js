@@ -133,7 +133,7 @@ $(window).scroll(function () {
       $('.brand').fadeOut(550)
     }
   }
-})
+});
 
 function remoteSVG (selector, c, onload) {
   var $mi = $(selector)
@@ -306,6 +306,11 @@ function getCookie(name) {
     }
     return null;
 }
+
+function toggleMenuMobile(x){
+    x.classList.toggle("change");
+}
+
 
 
 
