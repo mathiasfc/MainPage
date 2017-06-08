@@ -1,4 +1,5 @@
 var userLang = navigator.language || navigator.userLanguage; 
+var typeEnabled = false;
 
 var isMobile = {
   Android: function () {
@@ -49,15 +50,18 @@ $(document).ready(function(){
 		setPositionCircle($("#hdLanguage").val());
 	}
 	
+	setTimeout(function(){
+	$(".switchPosition").show();
+	},200);
 	
-	$('.welcomeMsgs').typed({
-  strings: strings.msgs,
-  typeSpeed: 90,
-  backDelay: 1800,
-  callback: function () {
-    $('.typed-cursor').fadeOut()
-  }
-});
+	/*setTimeout(function(){
+		if($(document).scrollTop() < $("#spanName").position().top()+10)){
+			posicionaBrand();	
+		}
+	},200);*/
+	
+	
+
 
 //HAILJACK SCROLL
 /*var currentSection = $('#welcome');
@@ -118,22 +122,45 @@ $(document).on('click', 'a', function(event){
 $(window).scroll(function () {
   var $w = $('#welcome')
   var $d = $(document)
-  if ($w.height() - $d.scrollTop() <= 50) {
+  if ($w.height() - $d.scrollTop() <= 100) {
     $('header').css('background-color', '#020405')
     if (isMobile.any()) {
-      $('.brand').css('marginLeft', '45px')
-      $('.menu-icon').fadeIn(550)
-      $('.brand').fadeIn(550)
+      //$('.brand').css('marginLeft', '45px')
+      //$('.menu-icon').fadeIn(550)
+      //$('.brand').fadeIn(550)
     }
   } else {
     $('header').css('background-color', 'transparent')
     $('.active').css('background-color', 'transparent')
     if (isMobile.any()) {
-      $('.menu-icon').fadeOut(550)
-      $('.brand').fadeOut(550)
+      //$('.menu-icon').fadeOut(550)
+      //$('.brand').fadeOut(550)
     }
   }
-});
+  
+  
+  //Animação do nome
+  var spanName = $("#spanName");
+  var namePosition = spanName.position().top;
+  
+  if(!isMobile.any()){
+	  if($d.scrollTop() > namePosition+10){
+		$('.brand').fadeIn(550);
+		$('.brand').css('left','5px');
+		$(".switchPosition").css('margin-left','220px');
+		
+	  }else{
+	    $('.brand').fadeOut(100, function() {
+			posicionaBrand();
+		});
+		$(".switchPosition").css('margin-left','65px');
+	  }
+  }
+  
+  if( $d.scrollTop() > $(".welcomeMsgs").position().top && !typeEnabled){
+	  enableTyped();
+  }
+})
 
 function remoteSVG (selector, c, onload) {
   var $mi = $(selector)
@@ -246,25 +273,23 @@ $('a[href*=#]').on('click', function(event) {
 
 function setLanguage(userLang){
 	if(userLang == "pt-BR"){
-		strings.msgs[0] = "Seja bem-vindo";
-		strings.msgs[1] = "Sinta-se à vontade para me contatar";
+		strings.msgs[0] = "Sinta-se à vontade para me contatar, mathias.falci@gmail.com";
 		$(".spanSobre").text("Sobre");
 		$(".spanSkills").text("Skills");
 		$(".spanContato").text("Contato");
-		document.getElementById("spanOla").innerHTML = "Olá";
-		var text = "Meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS, o que me levou a escolher "+ 
+		//document.getElementById("spanOla").innerHTML = "Olá";
+		var text = "Meu nome é Mathias Falci de Castro, sou estudante e tenho 23 anos, comecei a estudar ciência da computação há quatro anos na PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), o que me levou a escolher "+ 
 		"esse curso foi o fascínio pelas ferramentas de automação, principalmente em games. Meu primeiro contato com a programção foi através de script's escritos em <a href='https://www.lua.org/portugues.html'>LUA</a> há muito tempo.<br>"+
 		"Desde então me interessei cada vez mais sobre o assunto, me tornei um entusiasta das linguagens e seus potenciais, e hoje a programação faz parte da minha rotina de trabalho e estudo. No final de 2015 comecei a trabalhar na <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
-		"desenvolvendo softwares e páginas web, durante este período que descobri meu encanto por linguagens como C# e JavaScript. No meu <del>tempo livre</del> gosto de me aprofundar em linguagens que me chamam atenção como Python e "+
+		"desenvolvendo softwares e páginas web, durante este período que descobri meu encanto por linguagens como C# e JavaScript. No meu <del>tempo livre</del> gosto de me aprofundar em linguagens que chamam minha atenção como Python e "+
 		"me aventurar \"fuçando\" framework's e plugin's javascript. Também tento participar sempre que possível do <a href='https://pt.stackoverflow.com/'>StackOverflow</a> visando ampliar meu conhecimento nas mais diversas áreas da programação.";
 		document.getElementById("spanDescription").innerHTML = text;
 	}else if(userLang == "en-US"){
-		strings.msgs[0] = "Welcome";
-		strings.msgs[1] = "Feel free to contact me";
+		strings.msgs[0] = "Feel free to contact me, mathias.falci@gmail.com";
 		$(".spanSobre").text("About");
 		$(".spanSkills").text("Skills");
 		$(".spanContato").text("Contact");
-		document.getElementById("spanOla").innerHTML = "Hello";
+		//document.getElementById("spanOla").innerHTML = "Hello";
 		var text = "My name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose "+ 
 		"this course was the fascination for automation tools, especially in games. My first contact with programming was through scripts written in <a href='https://www.lua.org/portugues.html'>LUA</a> a long time ago.<br>"+
 		"Since then I have become more interested in the subject, I became an enthusiast of languages and their potential, and today programming is part of my work routine and study. In the end of 2015 I started working on <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
@@ -307,12 +332,27 @@ function getCookie(name) {
     return null;
 }
 
-function toggleMenuMobile(x){
-    x.classList.toggle("change");
+function posicionaBrand(){
+	$(".brand").css('left',$("#spanName").position().left);
 }
 
-
-
+function enableTyped(){
+	setTimeout(function(){
+		$('.welcomeMsgs').typed({
+		strings: strings.msgs,
+		typeSpeed: 70,
+		backDelay: 1800,
+		callback: function () {
+			//$('.typed-cursor').fadeOut()
+		}
+	});
+	
+	typeEnabled = true;
+		
+	},32000);
+	
+	
+}
 
 
 

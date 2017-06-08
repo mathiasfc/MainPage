@@ -104,6 +104,7 @@ header > a {
       font-family: arial,sans-serif;
 }
 
+
 header > .links {
   float: right;
   list-style:none;
@@ -130,9 +131,11 @@ header > .links > .link > a {
 
 header > a.brand {
   font-size: 20px;
-  padding-top: 15px;
   padding-bottom: 15px;
   margin-left: 15px;
+  position:fixed;
+  -webkit-transition: all 0.35s;
+  display:none;
 }
 
 header > .menu-icon {
@@ -208,7 +211,7 @@ section#skills > .skills-cont {
 }
 
 .welcomeMsgs{
-	font-size:25px;
+	/*font-size:25px;*/
 }
 
 section#skills > .skills-cont > .skill {
@@ -936,7 +939,7 @@ a {
 	height: 14px;
 	left: 0;
 	position: absolute;
-	top: 2.5px;
+	top: 2.8px;
 	-webkit-transition: left .2s ease;
 	-moz-transition: left .2s ease;
 	-ms-transition: left .2s ease;
@@ -947,9 +950,11 @@ a {
 }
 
 .switchPosition{
-	    margin-left: 220px;
-    margin-top: -33px;
+	margin-left: 65px;
+    margin-top: 15px;
     position: absolute;
+	-webkit-transition: all 0.55s;
+	display:none;
 }
 
 .full{
@@ -957,39 +962,20 @@ a {
 	width:100%;
 }
 
-.menuMobile {
-    display: inline-block;
-    cursor: pointer;
-	margin-left: 10px;
-	margin-left: 10px;
-    margin-top: 2px;
+#spanFSD{
+	    position: absolute;
+    margin-left: -80px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: -15px;
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
+#spanName{
+   margin-left: 10px;
 }
 
-/* Rotate first bar */
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-}
-
-/* Fade out the second bar */
-.change .bar2 {
-    opacity: 0;
-}
-
-/* Rotate last bar */
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-}
-
-@media (min-width: 768px) {
-  .menuMobile {display: none;}
+.toHeader{
+	    left: 145px;
+    margin-top: -66px;
+    font-size: 19px;
+    position: fixed;
 }
