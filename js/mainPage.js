@@ -354,6 +354,10 @@ function enableTyped(){
 	
 }
 
+function toggleMenuMobile(x){
+    x.classList.toggle("change");
+}
+
 
 
 
