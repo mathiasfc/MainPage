@@ -858,6 +858,7 @@ a {
 		padding-left: 20%;
 		padding-right: 20%;
 		min-height:556px;
+		    min-width: 300px;
 	}
 	
 	@media (max-width: 830px){
@@ -982,12 +983,10 @@ a {
 
 
 .menuMobile {
-    display: inline-block;
     cursor: pointer;
-	margin-left: 10px;
-	margin-left: 10px;
-    margin-top: 2px;
-	display: none;
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 5px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -1017,4 +1016,9 @@ a {
 
 @media (min-width: 768px) {
   .menuMobile {display: none;}
+}
+
+@media (max-width: 768px) {
+  .menuMobile {display: none;}
+  /*TODO HERE*/
 }
