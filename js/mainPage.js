@@ -178,7 +178,8 @@ $(window).scroll(function () {
   }
 });
 
-/*$(window).resize(function() {
+$(window).resize(function() {
+	var $d = $(document);
 	if($d.scrollTop() > $("#spanName").position().top+10){
 		if($d.width()<=750){
 			$('.brand').css('left','45px');
@@ -195,7 +196,7 @@ $(window).scroll(function () {
 		}
 	}
 	
-});*/
+});
 
 function remoteSVG (selector, c, onload) {
   var $mi = $(selector)
@@ -372,6 +373,7 @@ function posicionaBrand(){
 }
 
 function enableTyped(){
+	typeEnabled = true;
 	setTimeout(function(){
 		$('.welcomeMsgs').typed({
 		strings: strings.msgs,
@@ -381,9 +383,6 @@ function enableTyped(){
 			//$('.typed-cursor').fadeOut()
 		}
 	});
-	
-	typeEnabled = true;
-		
 	},32000);
 	
 	
@@ -391,6 +390,11 @@ function enableTyped(){
 
 function toggleMenuMobile(x){
     x.classList.toggle("change");
+	ToggleMobileMenu();
+}
+
+function ToggleMobileMenu(){
+	//TODO HERE
 }
 
 
