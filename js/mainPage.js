@@ -196,6 +196,16 @@ $(window).resize(function() {
 		}
 	}
 	
+	if(!$('.menuMobile').is(':visible')){
+		if($("#mobileMenu").is(':visible')){
+			toggleMenuMobile(document.getElementsByClassName("menuMobile")[0]);
+		}
+		$("#mobileMenu").hide();
+	}
+{
+
+}
+	
 });
 
 function remoteSVG (selector, c, onload) {
@@ -389,12 +399,13 @@ function enableTyped(){
 }
 
 function toggleMenuMobile(x){
+	console.log(x);
     x.classList.toggle("change");
 	ToggleMobileMenu();
 }
 
 function ToggleMobileMenu(){
-	//TODO HERE
+	$('#mobileMenu').slideToggle("fast");
 }
 
 
