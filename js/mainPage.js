@@ -208,22 +208,6 @@ $(window).resize(function() {
 	
 });
 
-function remoteSVG (selector, c, onload) {
-  var $mi = $(selector)
-  var getUrl = $mi.data('src')
-  $.get(getUrl, function (data) {
-    data = (new XMLSerializer()).serializeToString(data)
-    var $s = $(data)
-    $s.attr('class', c)
-    if (/close\.svg/.test(getUrl)) {
-      $s.attr('width', '47')
-      $s.attr('height', '47')
-    }
-    onload()
-    $mi.replaceWith($s)
-  })
-}
-
 var skills = {
   frontend: [
     'jQuery',
@@ -292,15 +276,6 @@ Object.keys(skills).forEach(function (key) {
     $('.' + key).append('<li class="skill-item">' + s + '</li>')
   })
 })
-
-remoteSVG('svg.menu-icon', 'menu-icon', function () {
-  $('.menu-icon').on('click', function () {
-    console.log('click')
-    $('.shadow').fadeIn()
-    $('.vertical-menu').addClass('animated slideInLeft')
-  })
-})
-remoteSVG('svg.menu-close', 'menu-close')
 
 $('a[href*=#]').on('click', function(event) {
   $('.active').removeClass('active')
