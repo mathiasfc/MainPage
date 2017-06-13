@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!--Scripts -->
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/typed.js"></script>
+  <script type="text/javascript" src="js/mainPage.js"></script>
+  <script type="text/javascript" src="js/skillsCards.js"></script>
+  
+
+  
+
+  <!--End Scripts -->
+  
+  
+  <!--Styles -->
+  <link rel="stylesheet" type="text/css" href="css/mainPage.css">
+  <link rel="stylesheet" type="text/css" href="css/loading-hourglass.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <!--End Styles-->
+  
+  
+  
+  <title>Mathias Falci</title>
+  <meta name="description" content="Minha pagina pessoal">
+  <meta name="author" content="Mathias">
+  <link rel="shortcut icon" type="image/png" href="img/icons/html.png"/>
+
+	
+</head>
+<div class="loadingHourGlass">
+    <div class="up">
+        <div class="innera"></div>
+    </div>
+    <div class="down">
+        <div class="innerb"></div>
+    </div>
+</div>
+<body>
+<div id="page">
+
+<div class="vertical-menu">
+  <ul class="vertical-links">
+    <li class="vertical-link"><a href="#"><span class="spanSobre"></span></a></li>
+    <li class="vertical-link"><a href="#"><span class="spanSkills"></span></a></li>
+    <li class="vertical-link"><a href="#"><span class="spanContato"></span></a></li>
+  </ul>
+</div>
+<div class="shadow"></div>
+<header>
+  <a href="#welcome" class="brand">
+    Mathias Falci
+  </a>
+  
+  <div class="menuMobile" onclick="toggleMenuMobile(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+  </div>
+  
+  <div class="switch white switchPosition">
+			<input type="radio" name="switch" id="switch-off">
+			<input type="radio" name="switch" id="switch-on" checked>
+
+			<label id="ptBR" for="switch-off" style="font-family: arial,sans-serif;">pt-Br</label>
+			<label id="enUS" for="switch-on" style="font-family: arial,sans-serif;">en-Us</label>
+
+			<span id="circleToggle" class="toggle"></span>
+
+</div>
+
+  <ul class="links">
+     <li class="link"><a href="#about"><span class="spanSobre"></span></a></li>
+     <li class="link"><a href="#skills"><span class="spanSkills"></span></a></li>
+     <li class="link"><a href="#contact"><span class="spanContato"></span></a></li>
+  </ul>
+  
+  <div id="mobileMenu" >
+  <ul class="mobileLinks">
+     <li class="link" style="text-align:center; margin-bottom: 20px;"><a href="#about"><span class="spanSobre linkMobile"></span></a></li>
+     <li class="link" style="text-align:center; margin-bottom: 20px;"><a href="#skills"><span class="spanSkills linkMobile"></span></a></li>
+     <li class="link" style="text-align:center; margin-bottom: 20px;"><a href="#contact"><span class="spanContato linkMobile"></span></a></li>
+  </ul>
+  </div>
+  
+  
+</header>
+
+<section id="welcome" class="parallax container">
+  <div class="parallax-inner">
+     <img src="img/perfil.jpg" class="profile" />
+	
+	
+	
+	
+	<!--<div class="outer" style="display:block;">
+  <div class="hovereffect">
+    <img src="img/perfil.jpg" alt="">
+    <div class="overlay" >
+      <h2></h2>
+      <div class="rotate">
+        <p class="group1">
+          <a href="#">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-github"></i>
+          </a>
+        </p>
+        <hr>
+        <hr>
+        <p class="group2">
+          <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-stack-overflow"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+	
+	
+	
+	
+    <!-- <h1><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span><span id="spanOla"></span><span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span><br /><span class="prog-language">console.log</span><span class="prog-language2">(</span><span style="font-size:18px;">"</span><span class="welcomeMsgs"></span><span style="font-size:18px;">"</span><span class="prog-language2">)</span><span style="font-size:18px;">;</span></h1> -->
+	<h2><span id="spanName">Mathias Falci de Castro</span></h2>
+	<h3 style="font-size: 1.09em;"><span id="spanFSD"><!--<hr style="position: absolute; width: 35px; margin-left: -47px;">-->Full Stack Developer<!--<hr style="position: absolute; width: 35px;  top: 0px; margin-left: 180px;">--></span></h3>
+  </div>
+</section>
+<section id="about">
+<div class="parallaxDeveloper">
+
+</div>
+
+<div class="aboutMe">
+<h1><span class="spanSobre"></span></h1>
+<div class="textAboutMe">
+<span id="spanDescription"></span><br>
+<span class="welcomeMsgs"></span>
+</div>
+</div>
+
+  
+</section>
+
+<section id="skills">
+  <h1><span class="spanSkills"></span></h1>
+
+<div class="allSkills">
+  <div id="firstDivSkills" class="skills">
+	<div class="header">
+		<h2><img src="img/icons/html.png" class="skillIcon" />Front-end</h2>
+	</div>
+	<div data-label="Javascript/Jquery" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Html/CSS" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Asp.Net" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Bootstrap" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="AJAX" data-level="65" class="chart"><span></span><p></p></div>
+	<div data-label="Angular" data-level="40" class="chart"><span></span><p></p></div>
+</div>
+
+<div id="secondDivSkills" class="skills">
+	<div class="header">
+		<h2><img src="img/icons/gear.png" class="skillIcon" />Back-end</h2>
+	</div>
+	<div data-label=".NET(C#,VB)" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Java" data-level="60" class="chart"><span></span><p></p></div>
+	<div data-label="SQL" data-level="60" class="chart"><span></span><p></p></div>
+	<div data-label="Python" data-level="50" class="chart"><span></span><p></p></div>
+	<div data-label="C++" data-level="45" class="chart"><span></span><p></p></div>
+	<div data-label="C" data-level="30" class="chart"><span></span><p></p></div>
+</div>
+
+<div id="thirdDivSkills" class="skills">
+	<div class="header">
+		<h2><img src="img/icons/notepad.png" class="skillIcon" />IDE's</h2>
+	</div>
+	<div data-label="Visual Studio" data-level="90" class="chart"><span></span><p></p></div>
+	<div data-label="SQL Server" data-level="80" class="chart"><span></span><p></p></div>
+	<div data-label="Eclipse" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Android Studio" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Code Blocks" data-level="70" class="chart"><span></span><p></p></div>
+	<div data-label="Netbeans" data-level="60" class="chart"><span></span><p></p></div>
+	<!-- <div data-label="Sublime" data-level="67" class="chart"><span></span><p></p></div> -->
+	<!-- <div data-label="Notepad++" data-level="66" class="chart"><span></span><p></p></div> -->
+</div>
+
+</div>
+</section>
+<section id="contact">
+<div class="rowContact">
+
+<div class="divSocial contact-github " onclick="window.open('https://github.com/mathiasfc', '_blank');">
+	<!--<a target="_blank" href="https://github.com/mathiasfc">-->
+        <i class="fa fa-github iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">Github</p>
+    <!--</a>-->
+</div>
+
+<div class="divSocial contact-stack " onclick="window.open('https://pt.stackoverflow.com/users/67721/mathias', '_blank');">
+	<!--<a target="_blank" href="https://pt.stackoverflow.com/users/67721/mathias">-->
+        <i class="fa fa-stack-overflow iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">Stack Overflow</p>
+    <!--</a>-->
+</div>
+
+<div class="divSocial contact-wordpress " onclick="window.open('https://mathiasfalci.wordpress.com/', '_blank');">
+	<!--<a target="_blank" href="https://mathiasfalci.wordpress.com/">-->
+        <i class="fa fa-wordpress iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">WordPress</p>
+    <!--</a>-->
+</div>
+
+
+</div>
+<div class="rowContact">
+<div class="divSocial contact-linkedin  " onclick="window.open('https://br.linkedin.com/in/mathias-falci-de-castro-9b6778a0', '_blank');">
+	<!--<a target="_blank" href="https://br.linkedin.com/in/mathias-falci-de-castro-9b6778a0">-->
+        <i class="fa fa-linkedin-square iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">LinkedIn</p>
+    <!--</a>-->
+</div>
+
+<div class="divSocial contact-facebook " onclick="window.open('https://www.facebook.com/mathiasfalci', '_blank');">
+	<!--<a target="_blank" href="https://www.facebook.com/mathiasfalci">-->
+        <i class="fa fa-facebook-square iconSocial" style="font-size:5em; "></i>
+		<p class="nameSocial">Facebook</p>
+    <!--</a>-->
+</div>
+	
+<div class="divSocial contact-email ">
+	<!--<a target="_blank" href="#">-->
+        <i class="fa fa-envelope iconSocial" style="font-size:5em;"></i>
+		<p class="nameSocial">mathias.falci@gmail.com</p>
+    <!--</a>-->
+</div>
+</div>
+</section></div>
+<input type="hidden" id="hdLanguage" value="pt-Br">
+</body>
+</html>
