@@ -311,11 +311,11 @@ function setLanguage(userLang){
 		$(".spanSkills").text("Skills");
 		$(".spanContato").text("Contact");
 		//document.getElementById("spanOla").innerHTML = "Hello";
-		var text = "My name is Mathias Falci de Castro, I am 23 year old student. I started studying computer science four years ago in PUCRS (Pontifícia Universade Católica do Rio Grande do Sul), What made me choose "+ 
+		var text = "My name is Mathias Falci de Castro, I'm a 23 year old student. I started studying computer science four years ago in PUCRS (Pontifical Catholic University of Rio Grande do Sul), What made me choose "+ 
 		"this course was the fascination for automation tools, especially in games. My first contact with programming was through scripts written in <a href='https://www.lua.org/portugues.html'>LUA</a> a long time ago.<br>"+
 		"Since then I have become more interested in the subject, I became an enthusiast of languages and their potential, and today programming is part of my work routine and study. In the end of 2015 I started working on <a href='http://www.absis.com.br/paginas/default.aspx'>Absis</a>,<br>"+
 		"developing softwares and web pages, during this time I discovered my charm for languages like C# and JavaScript. In my <del>free time</del> I like to study languages that call me attention like Python and "+
-		"explore framework's and plugin's javascript. I also try to participate whenever possible in the <a href='https://pt.stackoverflow.com/'>StackOverflow</a> looking for knowledge in the most diverse areas of programming."
+		"explore frameworks and plugins written in JavaScript. I also try to participate whenever possible in the <a href='https://pt.stackoverflow.com/'>StackOverflow</a> looking for knowledge in the most diverse areas of programming."
 		document.getElementById("spanDescription").innerHTML = text;
 	}
 	
